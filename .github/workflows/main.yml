@@ -58,6 +58,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase:
           script: |
             sudo docker pull ${{ secrets.DOCKER_LOGIN }}/${{ secrets.DOCKER_REPO }}
             sudo docker stop $(sudo docker ps -a -q)
