@@ -57,6 +57,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
+          # upd ssh-key
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_LOGIN }}/${{ secrets.DOCKER_REPO }}
